@@ -4,16 +4,56 @@
 // Google Fonts
 //
 
-@if $enable-fonts-import {
-  @import url($google-fonts-import);
+// @if $enable-fonts-import {
+//   @import url($google-fonts-import);
+// }
+@font-face {
+  font-family: 'DIN Pro';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/static/fonts/DINPro-Light.otf') format('opentype');
 }
-
+@font-face {
+  font-family: 'DIN Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/static/fonts/DINPro-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'DIN Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/static/fonts/DINPro-Medium.otf') format('opentype');
+}
+@font-face {
+  font-family: 'DIN Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/static/fonts/DINPro-Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'DIN Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/static/fonts/DINPro-Black.otf') format('opentype');
+}
 //
 // Headings
 //
 
 // Ensure elements that are not headings are properly
 // displayed as block level elements.
+
+body {
+  margin: 0;
+  font-family: $font-family-dinpro-first;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
 .h1, .h2, .h3, .h4, .h5, .h6 {
   display: block;
 }

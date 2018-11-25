@@ -4,10 +4,10 @@
 
 .card {
   background-color: $card-bg;
-  border: none;
+  //border: none;
 
   @include border-radius($card-border-radius);
-  @include box-shadow($card-box-shadow);
+  //@include box-shadow($card-box-shadow);
 
   > .list-group:first-child {
     .list-group-item:first-child {
@@ -27,7 +27,7 @@
 
   // Fix paragraph margins inside cards
   .card-text {
-    margin-bottom: $card-paragraph-margin-bottom;
+    //margin-bottom: $card-paragraph-margin-bottom;
   }
 
   // Remove text decoration.
@@ -48,7 +48,7 @@
 }
 
 .card-body {
-  padding: $card-spacer-x;
+  //padding: $card-spacer-x;
 
   > p:last-child {
     margin-bottom: 0;
@@ -82,7 +82,9 @@
   border-bottom: none;
 
   &:first-child {
-    @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
+    @include border-radius(
+      $card-inner-border-radius $card-inner-border-radius 0 0
+    );
   }
 }
 
@@ -92,10 +94,11 @@
   border-top: none;
 
   &:last-child {
-    @include border-radius(0 0 $card-inner-border-radius $card-inner-border-radius);
+    @include border-radius(
+      0 0 $card-inner-border-radius $card-inner-border-radius
+    );
   }
 }
-
 
 //
 // Header navs
@@ -123,7 +126,7 @@
 // Card image
 .card-img-overlay {
   padding: $card-img-overlay-padding;
-  background: rgba($blueish-grey, .5);
+  background: rgba($blueish-grey, 0.5);
   border-radius: $card-border-radius;
 
   .card-title {
@@ -144,7 +147,6 @@
   @include border-bottom-radius($card-inner-border-radius);
 }
 
-
 // Card deck
 
 .card-deck {
@@ -162,7 +164,6 @@
     }
   }
 }
-
 
 //
 // Card groups

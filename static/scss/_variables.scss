@@ -40,6 +40,9 @@ $yellow:  #ffb400 !default;
 $green:   #17c671 !default;
 $teal:    #1adba2 !default;
 $cyan:    #00b8d8 !default;
+$sogreen: #21CE99 !default;
+$soblue:  #428bca !default;
+$sored:   #f45531 !default;
 
 // Shards Specific
 $blueish-grey: #5A6169 !default;
@@ -58,7 +61,10 @@ $colors: map-merge((
   "cyan":       $cyan,
   "white":      $white,
   "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "gray-dark":  $gray-800,
+  "sogreen": $sogreen,
+  "soblue": $soblue,
+  "sored": $sored,
 ), $colors);
 
 $primary:       $blue !default;
@@ -69,7 +75,9 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-200 !default;
 $dark:          $gray-900 !default;
-
+$up:            $sogreen !default;
+$down:          $sored !default;
+$middle:        $soblue !default;
 $theme-colors: () !default;
 $theme-colors: map-merge((
   "primary":    $primary,
@@ -79,7 +87,10 @@ $theme-colors: map-merge((
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "up":         $up,
+  "down":       $down,
+  "middle":     $middle
 ), $theme-colors);
 // stylelint-enable
 
@@ -187,13 +198,13 @@ $transition-collapse:     height 350ms ease-in-out !default;
 
 $google-fonts-import: 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600|Roboto+Mono' !default; // Includes: Poppins: Light, Regular, Medium, Semi-bold; Roboto Mono: Regular
 
-$font-family-poppins-first: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-system-first: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-roboto-mono-first: "Roboto Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-dinpro-first: "DIN Pro", sans-serif !default;
+$font-family-system-first: "DIN Pro", Arial, sans-serif !default;
+$font-family-roboto-mono-first: "DIN Pro", sans-serif !default;
 
 $font-family-sans-serif: $font-family-system-first !default;
 $font-family-monospace:  $font-family-roboto-mono-first !default;
-$font-family-base:       $font-family-sans-serif !default;
+$font-family-base:       $font-family-dinpro-first !default;
 
 $font-size-base: 1rem !default;
 $font-size-lg:   1.25rem !default;
@@ -214,7 +225,7 @@ $h6-font-size: 1rem !default;
 
 $headings-margin-bottom: .75rem !default;
 
-$headings-font-family:   $font-family-poppins-first !default;
+$headings-font-family:   $font-family-dinpro-first !default;
 $headings-font-weight:   400 !default;
 $headings-color:         $gray-900 !default;
 $headings-letter-spacing: -.0625rem !default; // ~1px
@@ -307,7 +318,7 @@ $btn-font-weight:                 $font-weight-normal !default;
 $btn-font-size:                   .875rem !default;
 $btn-font-size-sm:                0.75rem !default;
 $btn-font-size-lg:                1.125rem !default;
-$btn-font-family:                 $font-family-poppins-first !default;
+$btn-font-family:                 $font-family-dinpro-first !default;
 $btn-box-shadow:                  none !default;
 
 $input-btn-focus-width:           .2rem !default;
@@ -576,7 +587,7 @@ $zindex-tooltip:            1070 !default;
 // Navs
 
 $nav-transition:                 $transition-base !default;
-$nav-font-family:                $font-family-poppins-first !default;
+$nav-font-family:                $font-family-dinpro-first !default;
 
 $nav-link-padding-y:            .625rem !default;
 $nav-link-padding-x:            1.125rem !default;
@@ -609,7 +620,7 @@ $nav-link-height:                   $navbar-brand-font-size * $line-height-base 
 $navbar-brand-height:               ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
 $navbar-brand-padding-y:            ($navbar-brand-height - $nav-link-height) / 2 !default;
 
-$navbar-font-family:                $font-family-poppins-first !default;
+$navbar-font-family:                $font-family-dinpro-first !default;
 $navbar-toggler-padding-y:           .5rem !default;
 $navbar-toggler-padding-x:           .5rem !default;
 $navbar-toggler-font-size:           1rem !default;
@@ -638,7 +649,7 @@ $pagination-padding-x-sm:             .6875rem !default;
 $pagination-padding-y-lg:             .9375rem !default;
 $pagination-padding-x-lg:             1.5625rem !default;
 $pagination-line-height:              1.25 !default;
-$pagination-font-family:              $font-family-poppins-first !default;
+$pagination-font-family:              $font-family-dinpro-first !default;
 $pagination-font-size:                .875rem !default;
 $pagination-box-shadow:               0 .125rem .9375rem rgba($blueish-grey, 0.1), 0 .125rem .1875rem rgba($blueish-grey, 0.15) !default;
 
@@ -686,7 +697,7 @@ $card-bg:                       $white !default;
 $card-title-font-weight:        500 !default;
 $card-title-margin-bottom:      .75rem !default;
 
-$card-link-font-family:         $font-family-poppins-first !default;
+$card-link-font-family:         $font-family-dinpro-first !default;
 
 $card-paragraph-margin-bottom:  1.5625rem !default;
 
