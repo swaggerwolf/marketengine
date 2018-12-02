@@ -6,13 +6,13 @@ export default () => {
     <Fragment>
       <Header />
 
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-2" />
-          <div class="col-md-8">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-2" />
+          <div className="col-md-8">
             <NewsComponent />
           </div>
-          <div class="col-md-2" />
+          <div className="col-md-2" />
         </div>
       </div>
     </Fragment>

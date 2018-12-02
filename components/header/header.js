@@ -17,6 +17,10 @@ const Header = () => (
         crossorigin="anonymous"
       />
       <link rel="stylesheet" href="/static/css/shards.css" />
+      <link
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet"
+      />
     </Head>
     <nav className="navbar navbar-expand-lg navbar-dark bg-middle mb-4">
       <div className="container">
@@ -27,7 +31,7 @@ const Header = () => (
           height="30"
         />
         <a className="navbar-brand" href="#">
-          Smooth Operator
+          Raging Bull
         </a>
         <button
           className="navbar-toggler"
