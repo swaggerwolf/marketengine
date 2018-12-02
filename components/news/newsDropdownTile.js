@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 
-export class CollapsibleCard extends Component {
+export class NewsCollapsibleCard extends Component {
   state = {
     open: false
   };
@@ -20,7 +20,7 @@ export class CollapsibleCard extends Component {
             <div className="col-1 text-center">
               <i
                 className={
-                  "fa" +
+                  "fa centerDivToParent " +
                   (this.state.open
                     ? " fa-chevron-circle-up"
                     : " fa-chevron-circle-down")
@@ -31,7 +31,8 @@ export class CollapsibleCard extends Component {
           </div>
           <div
             className={
-              "card-text" + (this.state.open ? " collapse show" : " collapse")
+              "card-text mt-2" +
+              (this.state.open ? " collapse show" : " collapse")
             }
             dangerouslySetInnerHTML={{ __html: this.props.content }}
           />
@@ -41,4 +42,4 @@ export class CollapsibleCard extends Component {
   }
 }
 
-export default CollapsibleCard;
+export default NewsCollapsibleCard;

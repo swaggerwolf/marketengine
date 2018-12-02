@@ -22,7 +22,6 @@ body {
   background-color: $body-bg;
 }
 
-
 //
 // Links
 //
@@ -37,7 +36,8 @@ a {
   }
 }
 
-b, strong {
+b,
+strong {
   font-weight: $font-weight-bold;
 }
 
@@ -49,7 +49,19 @@ b, strong {
 //
 // By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
 // margin for easier control within type scales as it avoids margin collapsing.
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
+}
+
+.centerDivToParent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
