@@ -8,7 +8,7 @@ export class NewsHPComponent extends Component {
   };
 
   componentDidMount() {
-    //this one move it backend server, fetching the news part and create a News Store
+    //this one move it to backend server, fetching the news part and create a News Store
     let parser = new Parser({
       customFields: {
         item: [["media:content", "media"]]
@@ -17,8 +17,8 @@ export class NewsHPComponent extends Component {
     const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
     (async () => {
       let feed = await parser.parseURL(
-        CORS_PROXY +
-          "https://news.google.com/news/rss/headlines/section/topic/BUSINESS?ned=in&hl=en&gl=IN"
+        CORS_PROXY + ""
+        //"https://news.google.com/news/rss/headlines/section/topic/BUSINESS?ned=in&hl=en&gl=IN"
       );
       console.log(feed);
       const featuredPost = feed.items
@@ -39,7 +39,7 @@ export class NewsHPComponent extends Component {
       this.state.featuredPost &&
       this.state.featuredPost.map(item => {
         return (
-          <div className="card mb-3">
+          <div className="card mb-3 h-100">
             <img
               className="card-img-top"
               src={item.media.$.url.replace("w150-h150", "w400-h400")}
@@ -59,9 +59,9 @@ export class NewsHPComponent extends Component {
 
     const otherPostsDom =
       this.state.rssposts &&
-      this.state.rssposts.slice(0, 4).map(item => {
+      this.state.rssposts.slice(0, 4).map((item, index) => {
         return (
-          <div className="card mb-3">
+          <div className={"card" + (index !== 3 ? " mb-3" : "")}>
             <div className="card-body">
               <h5 className="card-title mb-0">{item.title}</h5>
               <p className="card-text">
@@ -80,8 +80,8 @@ export class NewsHPComponent extends Component {
           powered by Google News
         </p>
         <div className="row">
-          <div className="col-md-4 pr-0">{featuredPostDom}</div>
-          <div className="col-md-8">{otherPostsDom}</div>
+          <div className="col-md-6 pr-0">{featuredPostDom}</div>
+          <div className="col-md-6">{otherPostsDom}</div>
         </div>
         <div className="row mt-2 w-100">
           <p className="w-100 text-right">Read More >></p>
