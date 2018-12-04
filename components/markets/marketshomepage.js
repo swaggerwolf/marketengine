@@ -18,7 +18,7 @@ export class MarketsHPComponent extends Component {
       <div className="row">
         <div className="row w-100">
           <div className="col-md-5">
-            <h1 className="text-left h2">Markets</h1>
+            <h1 className="text-left font-weight-normal h2">Markets</h1>
             <p className="small font-weight-normal d-block w-100">
               Are you ready to move the markets Mr. Operator ?
             </p>
@@ -32,7 +32,7 @@ export class MarketsHPComponent extends Component {
               <li className="nav-item">
                 <a
                   className={
-                    "btn nav-link mr-2" +
+                    "btn font-weight-normal nav-link mr-2" +
                     (this.state.region === "in"
                       ? " active bg-up"
                       : " btn-outline-secondary")
@@ -53,7 +53,7 @@ export class MarketsHPComponent extends Component {
               <li className="nav-item">
                 <a
                   className={
-                    "btn nav-link mr-2" +
+                    "btn font-weight-normal nav-link mr-2" +
                     (this.state.region === "us"
                       ? " active bg-up"
                       : " btn-outline-secondary")
@@ -74,7 +74,7 @@ export class MarketsHPComponent extends Component {
               <li className="nav-item">
                 <a
                   className={
-                    "btn nav-link mr-2" +
+                    "btn font-weight-normal nav-link mr-2" +
                     (this.state.region === "eu"
                       ? " active bg-up"
                       : " btn-outline-secondary")
@@ -95,7 +95,7 @@ export class MarketsHPComponent extends Component {
               <li className="nav-item">
                 <a
                   className={
-                    "btn nav-link mr-2" +
+                    "btn font-weight-normal nav-link mr-2" +
                     (this.state.region === "as"
                       ? " active bg-up"
                       : " btn-outline-secondary")
@@ -129,7 +129,7 @@ export class MarketsHPComponent extends Component {
               aria-labelledby="pills-home-tab"
             >
               <div className="row">
-                <div className="col-md-4">
+                <div className="col-md-3">
                   <div class="card">
                     <div class="card-body mb-0">
                       <div className="row">
@@ -137,7 +137,7 @@ export class MarketsHPComponent extends Component {
                           <h5 className="mb-0">Nifty</h5>
                         </div>
                         <div className="col-6">
-                          <p>12000</p>
+                          <p className="mb-0">12000</p>
                         </div>
                       </div>
                     </div>
