@@ -5,7 +5,8 @@ export class MarketsHPComponent extends Component {
     region: "in"
   };
 
-  updateRegion = region => {
+  updateRegion = (region, event) => {
+    event.preventDefault();
     this.setState({ region });
   };
 
@@ -38,12 +39,12 @@ export class MarketsHPComponent extends Component {
                   }
                   id="pills-home-tab"
                   data-toggle="pill"
-                  href="#pills-home"
+                  href=""
                   role="tab"
                   aria-controls="pills-home"
                   aria-selected="true"
-                  onClick={() => {
-                    this.updateRegion("in");
+                  onClick={event => {
+                    this.updateRegion("in", event);
                   }}
                 >
                   India
@@ -59,12 +60,12 @@ export class MarketsHPComponent extends Component {
                   }
                   id="pills-profile-tab"
                   data-toggle="pill"
-                  href="#pills-profile"
+                  href=""
                   role="tab"
                   aria-controls="pills-profile"
                   aria-selected="false"
-                  onClick={() => {
-                    this.updateRegion("us");
+                  onClick={event => {
+                    this.updateRegion("us", event);
                   }}
                 >
                   US
@@ -80,12 +81,12 @@ export class MarketsHPComponent extends Component {
                   }
                   id="pills-contact-tab"
                   data-toggle="pill"
-                  href="#pills-contact"
+                  href=""
                   role="tab"
                   aria-controls="pills-contact"
                   aria-selected="false"
-                  onClick={() => {
-                    this.updateRegion("eu");
+                  onClick={event => {
+                    this.updateRegion("eu", event);
                   }}
                 >
                   Europe
@@ -101,12 +102,12 @@ export class MarketsHPComponent extends Component {
                   }
                   id="pills-gaan-tab"
                   data-toggle="pill"
-                  href="#pills-gaan"
+                  href=""
                   role="tab"
                   aria-controls="pills-gaan"
                   aria-selected="true"
-                  onClick={() => {
-                    this.updateRegion("as");
+                  onClick={event => {
+                    this.updateRegion("as", event);
                   }}
                 >
                   Other Asian Countries
