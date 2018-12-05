@@ -7,3 +7,68 @@
 .collapsing {
   @include transition($transition-collapse);
 }
+
+.directionArrow {
+  position: absolute;
+  left: 50%;
+  font-size: 12px !important;
+}
+
+.bounceAlpha1 {
+  animation-name: bounceAlpha1;
+  animation-duration: 1.4s;
+  animation-delay: 0.14s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.bounceAlpha2 {
+  animation-name: bounceAlpha2;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes bounceAlpha1 {
+  0% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+
+  27% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+  }
+
+  36% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes bounceAlpha2 {
+  0% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
+  }
+
+  27% {
+    opacity: 0;
+    transform: translateY(0px) scale(0.9);
+  }
+
+  36% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
+  }
+}
