@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-
+import MarketCard from "./marketCard";
 export class MarketsHPComponent extends Component {
   state = {
     region: "in"
@@ -15,11 +15,11 @@ export class MarketsHPComponent extends Component {
   render() {
     console.log(this.state.region);
     return (
-      <div className="row">
+      <div className="row mb-5">
         <div className="row w-100">
           <div className="col-md-5">
-            <h1 className="text-left font-weight-normal h2">Markets</h1>
-            <p className="small font-weight-normal d-block w-100">
+            <h2 className="text-left font-weight-normal h1">Markets</h2>
+            <p className="small font-weight-normal ml-1 d-block w-100">
               Are you ready to move the markets Mr. Operator ?
             </p>
           </div>
@@ -34,7 +34,7 @@ export class MarketsHPComponent extends Component {
                   className={
                     "btn font-weight-normal nav-link mr-2" +
                     (this.state.region === "in"
-                      ? " active bg-up"
+                      ? " active bg-dark"
                       : " btn-outline-secondary")
                   }
                   id="pills-home-tab"
@@ -55,7 +55,7 @@ export class MarketsHPComponent extends Component {
                   className={
                     "btn font-weight-normal nav-link mr-2" +
                     (this.state.region === "us"
-                      ? " active bg-up"
+                      ? " active bg-dark"
                       : " btn-outline-secondary")
                   }
                   id="pills-profile-tab"
@@ -76,7 +76,7 @@ export class MarketsHPComponent extends Component {
                   className={
                     "btn font-weight-normal nav-link mr-2" +
                     (this.state.region === "eu"
-                      ? " active bg-up"
+                      ? " active bg-dark"
                       : " btn-outline-secondary")
                   }
                   id="pills-contact-tab"
@@ -97,7 +97,7 @@ export class MarketsHPComponent extends Component {
                   className={
                     "btn font-weight-normal nav-link mr-2" +
                     (this.state.region === "as"
-                      ? " active bg-up"
+                      ? " active bg-dark"
                       : " btn-outline-secondary")
                   }
                   id="pills-gaan-tab"
@@ -129,21 +129,33 @@ export class MarketsHPComponent extends Component {
               aria-labelledby="pills-home-tab"
             >
               <div className="row">
-                <div className="col-md-3">
-                  <div class="card">
-                    <div class="card-body mb-0">
-                      <div className="row">
-                        <div className="col-6">
-                          <h5 className="mb-0">Nifty</h5>
-                        </div>
-                        <div className="col-6">
-                          <p className="mb-0">12000</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div className="col-md-4">
+                  <MarketCard
+                    scrip="Nifty"
+                    price="10500"
+                    changeInt="+100"
+                    changePercent="5"
+                  />
+                  <MarketCard
+                    scrip="Nifty Bank"
+                    price="26500"
+                    changeInt="+300"
+                    changePercent="2"
+                  />
+                  <MarketCard
+                    scrip="Sensex"
+                    price="35000"
+                    changeInt="+400"
+                    changePercent="8"
+                  />
+                  <MarketCard
+                    scrip="Nifty IT"
+                    price="1050"
+                    changeInt="-100"
+                    changePercent="2"
+                  />
                 </div>
-                <div className="col-md-6" />
+                <div className="col-md-8" />
               </div>
             </div>
             <div

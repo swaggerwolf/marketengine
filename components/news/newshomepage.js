@@ -75,8 +75,8 @@ export class NewsHPComponent extends Component {
       });
     return (
       <div className="row">
-        <h1 className="text-left h2 d-block w-100">News</h1>
-        <p className="small font-weight-normal d-block w-100">
+        <h2 className="text-left h1 font-weight-normal d-block w-100">News</h2>
+        <p className="small font-weight-normal d-block ml-1 w-100">
           powered by Google News
         </p>
         <div className="row">

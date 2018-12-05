@@ -22,7 +22,7 @@ const Header = () => (
         rel="stylesheet"
       />
     </Head>
-    <nav className="navbar navbar-expand-lg navbar-dark bg-middle mb-4">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
       <div className="container">
         <img
           src="/static/images/demo/shards-logo.svg"
